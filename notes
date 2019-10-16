@@ -1,2 +1,7 @@
 1.  tee can be used with pipe . It will create two streams , one will show the output and other will store in a file 
     Syntax : cat file | tee tr.txt
+    
+2.  Spawning a ttyl shell 
+    python -c 'import pty;pty.spawn("/bin/bash")'
+    
+    
