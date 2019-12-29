@@ -1,0 +1,138 @@
+Automatic way for finding IDOR 
+
+Burp SUite Plugins 
+
+tOMONONOM
+
+Recon using vim/bash/terminal 
+
+subdomain enumeration
+	asset finder --subs-only 
+
+Http probe 
+-----------------
+
+
+You could do anything in bash , man !!!!!!!!!
+
+tee - saves and shows the output 
+
+tee -a = append 
+
+
+vim 
+------
+exit without saving = qall!
+
+meg 
+-------------------
+One path for lots of host 
+
+Fastest - Turbo Intruder
+
+Meg results 
+-------------------------
+
+Gives output in the out folder 
+
+where result is stored in the domain named folder 
+
+where two results will be there - http:// and https://
+
+index file contains all the results 
+
+
+grep -Hnri <string> * = in the directory 
+
+
+
+grep -Hnri <string> * | vim -  { bring the input into a buffer }
+
+:w = results 
+
+/ = search 
+
+%!sort -u 
+
+%!grep -v Content-Secu
+
+%! - the process is taken from vim in a shell and send back to vim 
+
+grep -vi = invert grep 
+
+
+%!awk -F':' '{print $3}' = cut -d ' ' -f 3
+
+
+ctrl v = visual block mode 
+
+select vertically and hit x delete 
+
+shift -a = append 
+
+/\.$ = searching . at the end of the line 
+
+:%s/// = the last thing u searched for 
+
+!sh = vim is running in background and we get a temporary shell 
+
+%!xargs 
+
+xargs = takes mul lines of inout and run a command for evry line 
+
+%!xargs -n1 -I{} sh -c 'echo {} | base64 -d'
+
+You can do anything in bash 
+
+find . -type f | html-tool attribs src | grep '\.js$'
+
+html-loop = give it a list of files and parse things out 
+
+find . -type f | html-tool tags title | vim - | = will give us the unique titles 
+
+
+to check from which page the title cam from 
+
+the grep was 
+
+:TABNEW | READ !GREP -HNR 'SELF'
+
+ctrl w g shift f 
+
+:set wrap! = line wrap
+
+Tom's onliner 
+
+daft one-liner:grep git repo for pattern:
+
+{ 
+	find .git/objects/pack/ - name "*.idx" | 
+	while read i; do 
+		git show-index < "$i" | awk '{print $2}';
+	done;
+
+	find .git/objects/ -type f|grep -v '/pack/'|
+	awk -F'/''{print $(NF-1)$NF}'; 
+} | while read o;do git cat-file -p $o; done|grep -E 'pattern'
+
+
+unfurl -u = unique paths 
+
+param miner 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
